@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background:url(stars1.png),linear-gradient(#050269,rgb(126, 9, 42));
+    height: 100vh;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    text-align: center;
+
+}
+section ul li{
+    list-style: none;
+    margin: 5px;
+}
+section ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #4b07b8;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    border-radius:20px ;
+    width: 100%;
+    transition: 0.5s;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 10;
+}
+section ul:hover li a{
+    opacity: 0;
+}
+section ul li a:hover{
+    transform: scale(1.2);
+    background: #63047a;
+    opacity: 1;
+    letter-spacing: 5px;
+}
+ ul li::after{
+    content: attr(data-text);
+    color: white;  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+   transform: translate(-43%,10%);
+   font-size: 80px;
+   font-weight: 900;
+   text-transform: uppercase;
+   opacity: 0;
+   transform: 0.5;
+   z-index: 0;
+   pointer-events: none;
+   transition: 0.5s;
+   letter-spacing: 50px;
+
+ }
+ ul li:hover::after{
+    opacity: 0.8;
+    letter-spacing: 5px;
+ }
+ul li::before{
+     content: '';
+     position: absolute;
+     border-radius: 50%;
+     background: #fff;
+     width: 180px;
+     height: 80px;
+     left: 50%;
+     top: 70%;
+     transform: translate(-40%,-50%);
+     box-shadow: 0 0 80px orangered;
+     opacity: 0;
+     transition: 0.5s;
+}
+ul li:hover::before{
+    width: 80px;
+    opacity: 0.5;
+}
